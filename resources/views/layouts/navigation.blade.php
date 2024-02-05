@@ -16,6 +16,21 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                 </div>
+
+                <!-- Navigation Links -->
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('users')" :active="request()->routeIs('users')">
+                        {{ __('Show Users') }}
+                    </x-nav-link>
+                    
+                    <x-nav-link :href="route('filter')" :active="request()->routeIs('filter')">
+                        {{ __('Filter Data') }}
+                    </x-nav-link>
+                    
+                    <x-nav-link :href="route('upload')" :active="request()->routeIs('upload')">
+                        {{ __('Upload Data') }}
+                    </x-nav-link>
+                </div>
             </div>
 
             <!-- Settings Dropdown -->
